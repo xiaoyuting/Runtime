@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     
-    //test分支 
+    //new分支 
     [super viewDidLoad];
     [self addGestureRecognizer];
     [self addshuxin];
