@@ -20,6 +20,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    //test分支 
     [super viewDidLoad];
     [self addGestureRecognizer];
     [self addshuxin];
