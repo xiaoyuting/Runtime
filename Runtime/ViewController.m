@@ -51,6 +51,7 @@
 
 //分类添加属性
 -(void)addshuxin{
+     //new分支
     Person * p = [[Person alloc]init];
     p.name =@"name";
     p.age =10;
@@ -60,6 +61,7 @@
 }
 //方法实现的交换
 -(void)exchangeAction{
+     //new分支
     UIImageView *subview = [[UIImageView alloc] initWithFrame:
                             CGRectMake(160.0f, 160.0f, 60.0, 60.0f)];
     //实际图片的名字变化
@@ -70,6 +72,7 @@
 }
 
 - (void)didReceiveMemoryWarning {
+     //new分支 
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
