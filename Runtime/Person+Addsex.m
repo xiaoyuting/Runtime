@@ -12,19 +12,20 @@
 static const int  psex;
 static const int  psoccer;
 -(void)setSex:(NSString *)sex{
-    objc_setAssociatedObject(self, &psex , sex , OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
--(NSString * )sex{
-    return  objc_getAssociatedObject(self , &psex);
+    objc_setAssociatedObject(self , &psex, sex, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 -(void)setSoccer:(int)soccer{
-  
-    NSString * s = [NSString stringWithFormat:@"%d",soccer];
-    objc_setAssociatedObject(self , &psoccer, s, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    
+    NSString * a = [NSString stringWithFormat:@"%d",soccer];
+    objc_setAssociatedObject(self , &psoccer, a , OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
--(int)soccer{
+
+- (NSString*)sex{
+    return objc_getAssociatedObject(self , &psex);
+}
+
+- (int )soccer{
     return [objc_getAssociatedObject(self , &psoccer) intValue];
 }
 @end
+

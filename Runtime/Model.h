@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+exchange.h"
+//#import "NSObject+exchange.h"
+#import "NSObject+change.h"
 @interface Model : NSObject
 @property (copy,nonatomic) NSString *name;
 @property (copy,nonatomic) NSString *sex;
-
 @property (copy,nonatomic) NSString *age;
-
-
 @end

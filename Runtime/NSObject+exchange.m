@@ -11,6 +11,7 @@
 @implementation NSObject (exchange)
 const char * kPropertyListKey ="propertyListKey";
 + (NSArray *)objcproperties{
+    //exit(0);
     /* 获取关联对象 */
     NSArray * ptyList = objc_getAssociatedObject(self, kPropertyListKey);
     /* 如果ptyList有值，直接返回 */

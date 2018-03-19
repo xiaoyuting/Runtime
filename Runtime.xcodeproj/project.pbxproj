@@ -23,6 +23,7 @@
 		0E767A4D1F6FA41F00E9DD01 /* NSObject+exchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E767A4C1F6FA41F00E9DD01 /* NSObject+exchange.m */; };
 		0E767A511F6FB0F300E9DD01 /* modelcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E767A501F6FB0F300E9DD01 /* modelcode.m */; };
 		0E767A541F6FB4B000E9DD01 /* actionAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E767A531F6FB4B000E9DD01 /* actionAdd.m */; };
+		8722B744205FA5FA0022744D /* NSObject+change.m in Sources */ = {isa = PBXBuildFile; fileRef = 8722B743205FA5FA0022744D /* NSObject+change.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		0E767A501F6FB0F300E9DD01 /* modelcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = modelcode.m; sourceTree = "<group>"; };
 		0E767A521F6FB4B000E9DD01 /* actionAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = actionAdd.h; sourceTree = "<group>"; };
 		0E767A531F6FB4B000E9DD01 /* actionAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = actionAdd.m; sourceTree = "<group>"; };
+		8722B742205FA5FA0022744D /* NSObject+change.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+change.h"; sourceTree = "<group>"; };
+		8722B743205FA5FA0022744D /* NSObject+change.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+change.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +209,8 @@
 				0E767A491F6FA3E000E9DD01 /* Model.m */,
 				0E767A4B1F6FA41F00E9DD01 /* NSObject+exchange.h */,
 				0E767A4C1F6FA41F00E9DD01 /* NSObject+exchange.m */,
+				8722B742205FA5FA0022744D /* NSObject+change.h */,
+				8722B743205FA5FA0022744D /* NSObject+change.m */,
 			);
 			name = "字典转模型";
 			sourceTree = "<group>";
@@ -290,7 +295,7 @@
 		0E7679F71F6F8B0600E9DD01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Video;
 				TargetAttributes = {
 					0E7679FE1F6F8B0700E9DD01 = {
@@ -369,6 +374,7 @@
 				0E767A3F1F6F959400E9DD01 /* Person+Addsex.m in Sources */,
 				0E767A4D1F6FA41F00E9DD01 /* NSObject+exchange.m in Sources */,
 				0E767A541F6FB4B000E9DD01 /* actionAdd.m in Sources */,
+				8722B744205FA5FA0022744D /* NSObject+change.m in Sources */,
 				0E767A371F6F8CEF00E9DD01 /* UIGestureRecognizer+Block.m in Sources */,
 				0E767A4A1F6FA3E000E9DD01 /* Model.m in Sources */,
 				0E767A3C1F6F952E00E9DD01 /* Person.m in Sources */,
@@ -439,7 +445,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -447,7 +455,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -487,7 +499,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -495,7 +509,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -524,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9VDDJ828HQ;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = Runtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conferencing.Runtime;
@@ -536,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9VDDJ828HQ;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = Runtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conferencing.Runtime;
@@ -612,6 +632,7 @@
 				0E767A2E1F6F8B0700E9DD01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E767A2F1F6F8B0700E9DD01 /* Build configuration list for PBXNativeTarget "RuntimeTests" */ = {
 			isa = XCConfigurationList;
@@ -620,6 +641,7 @@
 				0E767A311F6F8B0700E9DD01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E767A321F6F8B0700E9DD01 /* Build configuration list for PBXNativeTarget "RuntimeUITests" */ = {
 			isa = XCConfigurationList;
@@ -628,6 +650,7 @@
 				0E767A341F6F8B0700E9DD01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

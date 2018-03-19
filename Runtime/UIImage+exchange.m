@@ -29,6 +29,18 @@
     });
     
 }
+
++ (void)initialize{
+    static dispatch_once_t one;
+    dispatch_once(&one, ^{
+        
+        Method  origin   = class_getClassMethod(self , @selector(imageNamed: ));
+        Method  now      = class_getClassMethod(self , @selector(myImageNamed:));
+        method_exchangeImplementations(now , origin);
+        
+    });
+}
+
 + (UIImage *)myImageNamed:(NSString *)name {
     
     NSString * newName = [NSString stringWithFormat:@"%@%@", @"new_", name];

@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 #import "UIGestureRecognizer+Block.h"
 #import "Person+Addsex.h"
+
+
 #import "Model.h"
 #import "modelcode.h"
 #import "actionAdd.h"
@@ -20,9 +23,11 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    //new分支 
     [super viewDidLoad];
-    [self addGestureRecognizer];
-    [self addshuxin];
+   // [self addGestureRecognizer];
+   // [self addshuxin];
     [self dicChangeToModel];
     }
 
@@ -49,15 +54,25 @@
 
 //分类添加属性
 -(void)addshuxin{
-    Person * p = [[Person alloc]init];
+     //new分支
+    //Person * p = [[Person alloc]init];
+    
+    Person *p = objc_msgSend(objc_getClass("Person"), sel_registerName("alloc"));
+    p = objc_msgSend(p, sel_registerName("init"));
+    
     p.name =@"name";
     p.age =10;
     p.sex =@"man";
     p.soccer =100;
+   // [p publicMethod];
+    
+    objc_msgSend(p, @selector(publicMethod));
+  //   objc_msgSend([Person class], @selector(publicMethod));
     NSLog(@"name==%@\nage===%d\nsex====%@\nsoccer====%d",p.name,p.age,p.sex,p.soccer);
 }
 //方法实现的交换
 -(void)exchangeAction{
+     //new分支
     UIImageView *subview = [[UIImageView alloc] initWithFrame:
                             CGRectMake(160.0f, 160.0f, 60.0, 60.0f)];
     //实际图片的名字变化
@@ -68,6 +83,7 @@
 }
 
 - (void)didReceiveMemoryWarning {
+     //new分支 
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -79,7 +95,7 @@
                           @"sex":@"男",
                           @"age":@25
                           };
-    Model *model = [Model modelWithDic:dic];
+    Model *model = [Model modelWithDicKey:dic];
     NSLog(@"name:%@\n  sex:%@\n age:%@,",model.name,model.sex,model.age);
 
 }
